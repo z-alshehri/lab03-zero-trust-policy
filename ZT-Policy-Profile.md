@@ -22,21 +22,25 @@ It sits between the user and the requested resource. Based on instructions from 
 
 ## 2. Core Principle Application
 
-### Principle: Least Privilege
+### Principle: Verify Explicitly
+The principle of Verify Explicitly means that every access request must be evaluated using all available security signals before access is granted.
+In the Golden State Water Treatment Facility, the Policy Engine verifies the employee’s identity, device security posture, and network location before granting access to the HR Employee PII Database. 
 
-The principle of Least Privilege means that users should only have access to the resources they need to perform their job. They should not have extra permissions.
-
-For example, in a university system, a student can access their own grades and course materials, but cannot access other students' records or administrative data. Access is limited based on role and necessity.
-
+For example, if an HR employee requests access, the Policy Engine checks:
+- Multi-factor authentication is completed
+- The device is compliant and up to date
+- The connection is coming from an approved internal network
+Access is only granted if all conditions are satisfied.
 
 
 ## 3. Simplified Policy Table
 
-| User        | Resource           | Condition                     | Decision |
-|------------|--------------------|------------------------------|----------|
-| Student     | Course Portal      | Valid login and enrolled     | Allow    |
-| Faculty     | Student Records    | Verified identity and role   | Allow    |
-| Student     | Student Records    | Not authorized               | Deny     |
+| Policy Signal     | Condition to be Met                                  | Action if Condition is Met |
+|-------------------|------------------------------------------------------|----------------------------|
+| User Identity     | Valid credentials and multi-factor authentication    | Grant Access               |
+| Device Posture    | Device is compliant and has latest security updates  | Grant Access               |
+| Network Context   | Access request originates from approved secure network | Grant Access               |
+
 
 
 ## 4. Submission Details 
@@ -47,3 +51,9 @@ Dr. [ Safi Mojidi]
 Repository Link: https://github.com/z-alshehri/lab03-zero-trust-policy
 
 
+## Git Repository Metadata
+
+Project: Lab 03 – Zero Trust Policy  
+Filename: ZT-Policy-Profile.md  
+Commit Message: Final submission for Lab 03  
+Due Date: March 2, 2026
