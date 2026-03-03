@@ -1,6 +1,6 @@
 # Zero Trust Policy Profile
 
-## 1.ZTA Compontet Definitions
+## 1. ZTA Compontet Definitions
 
 ### Policy Engine (PE)
 The Policy Engine (PE) is the central decision-making component in a Zero Trust Architecture.
@@ -39,5 +39,11 @@ For example, in a university system, a student can access their own grades and c
 | Student     | Student Records    | Not authorized               | Deny     |
 
 
+## 4. Submission Details 
+
+Name: Zainab Alshehri 
+Course: Enterprise Infrastructure and Networks 
+Dr. [ Safi Mojidi] 
+Repository Link: https://github.com/z-alshehri/lab03-zero-trust-policy
 
 
